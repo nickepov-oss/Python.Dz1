@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>f.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+f.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+
+<span class="s1">heroes </span><span class="s2">= [</span><span class="s3">&quot;Hulk&quot;</span><span class="s2">, </span><span class="s3">&quot;Captain America&quot;</span><span class="s2">, </span><span class="s3">&quot;Iron-Man&quot;</span><span class="s2">, </span><span class="s3">&quot;Spider-Man&quot;</span><span class="s2">, </span><span class="s3">&quot;Batman&quot;</span><span class="s2">]</span>
+
+<span class="s1">players </span><span class="s2">= {}</span>
+
+<span class="s0">while True</span><span class="s2">:</span>
+    <span class="s1">name </span><span class="s2">= </span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Введи своє ім'я (або 'Все' щоб закінчити): &quot;</span><span class="s2">)</span>
+
+    <span class="s0">if </span><span class="s1">name</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">() == </span><span class="s3">&quot;все&quot;</span><span class="s2">:</span>
+        <span class="s0">break</span>
+    <span class="s0">if </span><span class="s1">len</span><span class="s2">(</span><span class="s1">heroes</span><span class="s2">) == </span><span class="s4">0</span><span class="s2">:</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Супергероїв більше немає&quot;</span><span class="s2">)</span>
+        <span class="s0">break</span>
+    <span class="s1">hero </span><span class="s2">= </span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">heroes</span><span class="s2">)</span>
+    <span class="s1">heroes</span><span class="s2">.</span><span class="s1">remove</span><span class="s2">(</span><span class="s1">hero</span><span class="s2">)</span>
+    <span class="s1">players</span><span class="s2">[</span><span class="s1">name</span><span class="s2">] = </span><span class="s1">hero</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Результат:&quot;</span><span class="s2">)</span>
+<span class="s0">for </span><span class="s1">name</span><span class="s2">, </span><span class="s1">hero </span><span class="s0">in </span><span class="s1">players</span><span class="s2">.</span><span class="s1">items</span><span class="s2">():</span>
+    <span class="s1">print</span><span class="s2">(</span><span class="s1">name</span><span class="s2">, </span><span class="s3">&quot;—&quot;</span><span class="s2">, </span><span class="s1">hero</span><span class="s2">)</span>
+
+</pre>
+</body>
+</html>
